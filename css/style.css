@@ -9,6 +9,7 @@ body {
   padding-top: 10px;
   background: radial-gradient(circle, #41404086 20%, rgb(43, 42, 42), rgb(29, 29, 29) 80%, black);
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .label {
