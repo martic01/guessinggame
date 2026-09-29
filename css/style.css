@@ -45,10 +45,10 @@ body {
 }
 
 .card {
-  height: 70vh;
+  height: 60vh;
   width: min(280px, calc(100vw - 32px));
   background: radial-gradient(circle, #52515186 20%, rgb(43, 42, 42), rgb(29, 29, 29) 70%, black);
-  margin: 20px auto 0;
+  margin: 40px auto 0;
   color: white;
   text-align: center;
   position: relative;
@@ -56,6 +56,7 @@ body {
   transition: transform 0.7s;
   perspective: 1000px;
   border-radius: 20px;
+  box-shadow: -20px -20px 40px 30px rgb(5, 5, 5);
 }
 
 .card.is-flipped {
@@ -96,6 +97,23 @@ body {
   font-size: larger;
 }
 
+.cardafter.tooLow h2,
+.cardafter.tooHigh h2 {
+  animation: hint-fade-in 0.35s ease-out both;
+}
+
+@keyframes hint-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .trynm {
   color: rgb(3, 221, 221);
   font-weight: 800;
@@ -117,15 +135,11 @@ body {
   font-weight: 700;
 }
 
-.fadein {
-  opacity: 1;
-  transition: opacity 0.4s;
-}
 
 .win {
   box-shadow: 0 0 40px 4px rgb(97, 245, 232);
   border: 3px solid aqua;
-   transform: perspective(1000px) rotateY(180deg);
+  transform: perspective(1000px) rotateY(180deg);
 }
 
 .tooLow {
@@ -133,6 +147,8 @@ body {
   border: 3px solid rgb(4, 175, 175);
   border-bottom: none;
 }
+
+
 
 
 .tooHigh {
